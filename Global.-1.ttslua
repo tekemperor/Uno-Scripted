@@ -599,9 +599,11 @@ function HideUNO()
     --If someone else other than the player with UNO pressed the button, uno_Called will be true, so we should deal 2 cards to the player with UNO
     if uno_Called == true
     then
+        uno_Called = false
         DealCardsToColor(2,color_Has_Uno)   
     end
     uno_Button_Visible = false
+    color_Has_Uno = nil
     UI.hide("UNO_Button")
 end--Function HideUNO END
 
